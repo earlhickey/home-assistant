@@ -1,0 +1,61 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:stable
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "10"
+    volumes:
+      # Data persistency
+      - ./hass:/config
+    # devices:
+      # Zwave USB stick
+      # - /dev/ttyACM0:/dev/ttyACM0
+      # P1 cable
+      # - /dev/ttyUSB0:/dev/ttyUSB0
+    environment:
+      - TZ=Europe/Amsterdam
+    depends_on:
+      - influxdb
+    restart: always
+    network_mode: host
+
+  influxdb:
+    container_name: influxdb
+    image: influxdb:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "10"
+    ports:
+      - 8086:8086
+    environment:
+      INFLUXDB_DB: home_assistant
+    volumes:
+      # Data persistency
+      - ./influxdb:/var/lib/influxdb
+    restart: always
+    network_mode: host
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:5.4.3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-file: "10"
+    ports:
+      - 3000:3000
+    volumes:
+      # Data persistency
+      # sudo chown 472:472 ./grafana
+      - ./grafana:/var/lib/grafana
+    depends_on:
+      - influxdb
+    restart: always
+    network_mode: host
