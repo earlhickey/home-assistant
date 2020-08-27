@@ -10,7 +10,6 @@ cards:
       - sensor.load_1m
       - sensor.load_5m
       - sensor.load_15m
-      - sensor.cpu_temperature
       - sensor.memory_free
       - sensor.disk_free
       - sensor.disk_use_percent_home
@@ -43,8 +42,8 @@ cards:
       - sensor.synology_cpu_load_total
       - sensor.synology_memory_usage_real
       - sensor.synology_status_volume_1
-      - sensor.synology_temperature_sda
-      - sensor.synology_temperature_sdb
+      - sensor.synology_temperature_sata1
+      - sensor.synology_temperature_sata2
       - sensor.synology_used_space_volume_1
       - sensor.synology_total_size_volume_1
       - sensor.synology_volume_used_volume_1
