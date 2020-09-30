@@ -9,3 +9,5 @@ tts
 *.sqlite
 __pycache__
 secrets.yaml
+known_devices.yaml
+zwcfg_0xd05c989b.xml
