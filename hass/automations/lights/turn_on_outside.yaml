@@ -10,4 +10,4 @@ condition:
     before: '22:00:00'
 action:
   - service: light.turn_on
-    entity_id: light.tuin
+    entity_id: light.buiten

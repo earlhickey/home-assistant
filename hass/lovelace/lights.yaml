@@ -12,7 +12,7 @@ cards:
           - type: light
             entity: light.woonkamer
           - type: light
-            entity: light.tuin
+            entity: light.buiten
           - type: entities
             title: Automations
             show_header_toggle: false
@@ -24,7 +24,7 @@ cards:
         title: Verlichting Woonkamer
         cards:
           - type: light
-            entity: light.eettafel
+            entity: light.eet_tafel
           - type: light
             entity: light.bank
           - type: light

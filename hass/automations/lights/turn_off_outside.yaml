@@ -5,4 +5,4 @@ trigger:
     platform: time
 action:
   - service: light.turn_off
-    entity_id: light.tuin
+    entity_id: light.buiten
