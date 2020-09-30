@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Cronjob
-# 30 3 * * * /home/pi/home-assistant-pi/backup_influxdb.sh >> /dev/null 2>&1
+# 30 3 * * * /volume1/docker/home-assistant/backup_influxdb.sh >> /dev/null 2>&1
 
-DOCKER="/usr/bin/docker"
-DOCKER_ID=$(/usr/bin/docker ps -aqf "name=influxdb")
-PATH="/home/pi/home-assistant-pi/influxdb"
+DOCKER="/usr/local/bin/docker"
+DOCKER_ID=$(/usr/local/bin/docker ps -aqf "name=influxdb")
+PATH="/volume1/docker/home-assistant/influxdb"
 DOCKER_PATH="/var/lib/influxdb"
 BACKUP_DIR="$PATH/backup/"
 DOCKER_BACKUP_DIR="$DOCKER_PATH/backup/"
