@@ -19,19 +19,18 @@ This setup runs on a Raspberry Pi 3 with Docker and Docker Compose. See https://
 * Philps Hue White ambiance 3x
 * Philps Hue White 2x
 
-## Get the stack (only once):
+## Install (only once):
 
 ```
 git clone https://github.com/earlhickey/home-assistant.git
 cd home-assistant
-docker-compose up -d
 ```
 
 ## Update settings (only once):
 
 Grafana user 742 needs access to data folder
 ```
-sudo chown 472:472 ./grafana
+chown 472:472 ./grafana
 ```
 
 Copy and adjust secrets file
@@ -60,19 +59,18 @@ docker-compose stop
 docker-compose rm
 ```
 
-## Update it:
-
-```
-cd home-assistant-pi
-git pull
-docker pull homeassistant/raspberrypi3-homeassistant
-docker pull influxdb
-docker pull grafana/grafana
-```
-
 ## Login into running docker machine
 ```
 docker exec -it influxdb /bin/bash
+```
+
+## Handy commands
+
+```
+# home assistant dir on NAS
+cd /volume1/docker/home-assistant/
+# list containers
+docker-compose ps
 ```
 
 ## Url's:
@@ -82,4 +80,8 @@ http://home.assistant:8123/
 
 Grafana (admin/admin)
 http://home.assistant:3000/
-```
+
+## Synology NAS
+
+Install USB drivers for Zwave stick and P1 cable
+http://www.jadahl.com/drivers_6.2/
