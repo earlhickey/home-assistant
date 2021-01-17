@@ -8,3 +8,11 @@ homeassistant:
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
   packages: !include_dir_named components/packages
+
+binary_sensor:
+  - platform: workday
+    country: NL
+    workdays: [mon, tue, wed, thu, fri]
+    excludes: [sat, sun, holiday]
+
+python_script:
