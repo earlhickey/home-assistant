@@ -3,3 +3,4 @@ name: DB file size
 command: "du -m home-assistant_v2.db | cut -f1"
 unit_of_measurement: 'MB'
 value_template: '{{ value | int - 1 }}'
+scan_interval: 3600
