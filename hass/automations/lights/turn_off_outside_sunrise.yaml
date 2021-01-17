@@ -1,0 +1,8 @@
+# Turn off outside lights
+alias: Buiten licht uit na zonsopkomst
+trigger:
+  - platform: sun
+    event: sunrise
+action:
+  - service: light.turn_off
+    entity_id: light.buiten

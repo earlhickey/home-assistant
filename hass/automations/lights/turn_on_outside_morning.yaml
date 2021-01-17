@@ -1,0 +1,17 @@
+# Turn on outside lights on work days
+alias: Buiten licht aan in de ochtend
+trigger:
+  - platform: time
+    at: '07:15:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
+      entity_id: 'binary_sensor.workday_sensor'
+      state: 'on'
+action:
+  - service: light.turn_on
+    entity_id: light.buiten
