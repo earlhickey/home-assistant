@@ -12,6 +12,8 @@ cards:
           - type: light
             entity: light.woonkamer
           - type: light
+            entity: light.badkamer
+          - type: light
             entity: light.buiten
           - type: entities
             title: Automations
@@ -20,7 +22,7 @@ cards:
               - entity: automation.buiten_licht_aan_30_min_na_zonsondergang
               - entity: automation.buiten_licht_uit_om_22_30
 
-      - type: vertical-stack # column 2
+      - type: vertical-stack # column 3
         title: Verlichting Woonkamer
         cards:
           - type: light
@@ -30,7 +32,19 @@ cards:
           - type: light
             entity: light.driepoot
 
-      - type: vertical-stack # column 3
+      - type: vertical-stack # column 2
+        title: Verlichting Badkamer
+        cards:
+          - type: light
+            entity: light.badkamer_wc
+          - type: light
+            entity: light.badkamer_wastafel
+          - type: light
+            entity:  light.badkamer_douchewand
+          - type: light
+            entity:  light.badkamer_douche
+
+      - type: vertical-stack # column 4
         title: Verlichting Buiten
         cards:
           - type: light

@@ -17,14 +17,14 @@ cards:
 
   # HASS
   - type: entities
-    title: HASS
+    title: Home Assistant
     show_header_toggle: false
     entities:
       - sensor.db_file_size
 
   # Router
   - type: entities
-    title: Router
+    title: Router Asus RT-AC68U
     show_header_toggle: false
     entities:
       - sensor.asuswrt_download
@@ -34,7 +34,7 @@ cards:
 
   # NAS
   - type: entities
-    title: NAS
+    title: NAS Synology 220+
     show_header_toggle: false
     entities:
       - sensor.synology_network_up
