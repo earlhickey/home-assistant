@@ -15,12 +15,6 @@ cards:
             entity: light.badkamer
           - type: light
             entity: light.buiten
-          - type: entities
-            title: Automations
-            show_header_toggle: false
-            entities:
-              - entity: automation.buiten_licht_aan_30_min_na_zonsondergang
-              - entity: automation.buiten_licht_uit_om_22_30
 
       - type: vertical-stack # column 3
         title: Verlichting Woonkamer

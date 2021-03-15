@@ -76,11 +76,6 @@ cards:
         name: Woonkamer temperatuur
         graph: line
         detail: 1
-      - type: entities
-        title: Automations
-        show_header_toggle: false
-        entities:
-          - entity: automation.sync_kitchen_thermostat_on_with_nest_thermostat
 
   # Kitchen
   - type: vertical-stack
