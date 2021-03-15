@@ -1,0 +1,18 @@
+# # Bathroom floor heater sync external sensor with current_temperature
+# alias: Sync bathroom temperature
+# trigger:
+#   platform: state
+#   entity_id: sensor.thermofloor_as_heatit_thermostat_tf_056_floor_sensor
+# action:
+#   - service: python_script.set_state
+#     data_template:
+#       entity_id: sensor.thermofloor_as_heatit_thermostat_tf_056_temperature
+#       state: '{{ float(12) }}'
+#   - service: python_script.set_state
+#     data_template:
+#       entity_id: sensor.thermofloor_as_heatit_thermostat_tf_056_external_sensor
+#       state: '{{ float(12) }}'
+#   - service: python_script.set_state
+#     data_template:
+#       entity_id: climate.thermofloor_as_heatit_thermostat_tf_056_mode.attributes.current_temperature
+#       state: '{{ float(12) }}'

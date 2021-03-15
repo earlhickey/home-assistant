@@ -2,6 +2,10 @@ alias: Sync kitchen thermostat on with Nest thermostat
 trigger:
   - platform: state
     entity_id: climate.living_room_thermostat
+condition:
+  - condition: time
+    after: "06:00:00"
+    before: "23:30:00"
 action:
   # Set kitchen heat/off
   - service: climate.set_hvac_mode
