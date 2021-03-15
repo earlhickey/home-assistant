@@ -1,11 +1,18 @@
 influxdb:
+  api_version: 1
   host: 127.0.0.1
   port: 8086
+  database: home_assistant
   max_retries: 3
   default_measurement: state
   include:
     entities:
-      # Qubino kitchen
+      # Heatit bathroom thermostat
+      - sensor.thermofloor_as_heatit_thermostat_tf_056_power
+      - sensor.thermofloor_as_heatit_thermostat_tf_056_energy
+      - sensor.thermofloor_as_heatit_thermostat_tf_056_floor_sensor
+      - sensor.thermofloor_as_heatit_thermostat_tf_056_voltage
+      # Qubino kitchen thermostat
       - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_power
       - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_energy
       - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_temperature

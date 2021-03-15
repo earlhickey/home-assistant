@@ -50,7 +50,7 @@ recorder:
       - sensor.voltage_swells_phase_l3
     event_types:
       - call_service # Don't record service calls
-      - automation_triggered
+      # - automation_triggered
       - config_entry_discovered
       - persistent_notifications_updated
       - script_started
