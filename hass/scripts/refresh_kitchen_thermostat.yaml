@@ -1,0 +1,9 @@
+# Refresh entity kitchen thermostat
+# UI of thermostat does not update because Cubino does not advertise target temperature
+refresh_kitchen_thermostat:
+  sequence:
+    - delay:
+        seconds: 1
+    - service: zwave.refresh_entity
+      data:
+        entity_id: climate.kitchen_thermostat
