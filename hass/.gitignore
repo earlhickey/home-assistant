@@ -2,13 +2,10 @@
 .storage
 blueprints
 deps
-tts
 .HA_VERSION
-*.db
+home-assistant_v2.db*
+known_devices.yaml
 *.log
 *.txt
 *.sqlite
-__pycache__
 secrets.yaml
-known_devices.yaml
-zwcfg_0xd05c989b.xml

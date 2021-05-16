@@ -8,3 +8,5 @@ views:
 resources:
   - url: /local/community/canvas-gauge-card/canvas-gauge-card.js
     type: module
+  - url: /local/community/simple-thermostat/simple-thermostat.js
+    type: module

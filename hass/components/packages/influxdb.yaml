@@ -7,15 +7,17 @@ influxdb:
   default_measurement: state
   include:
     entities:
+      # Eurotronics Spirit Thermostatic Valve master bedroom
+      - sensor.master_bedroom_thermostat_temperature
       # Heatit bathroom thermostat
-      - sensor.thermofloor_as_heatit_thermostat_tf_056_power
-      - sensor.thermofloor_as_heatit_thermostat_tf_056_energy
-      - sensor.thermofloor_as_heatit_thermostat_tf_056_floor_sensor
-      - sensor.thermofloor_as_heatit_thermostat_tf_056_voltage
+      - sensor.bathroom_thermostat_power
+      - sensor.bathroom_thermostat_energy
+      - sensor.bathroom_thermostat_floor_temperature
+      - sensor.bathroom_thermostat_voltage
       # Qubino kitchen thermostat
-      - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_power
-      - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_energy
-      - sensor.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_temperature
+      - sensor.kitchen_thermostat_power
+      - sensor.kitchen_thermostat_energy
+      - sensor.kitchen_thermostat_temperature
       # Buienradar
       - sensor.br_temperature
       - sensor.br_humidity
@@ -31,3 +33,8 @@ influxdb:
       - sensor.energy_consumption_tarif_2
       - sensor.energy_production_tarif_1
       - sensor.energy_production_tarif_2
+  component_config_glob:
+    sensor.*humidity:
+      override_measurement: humidity
+    sensor.*temperature:
+      override_measurement: temperature

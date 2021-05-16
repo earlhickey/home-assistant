@@ -8,11 +8,11 @@ trigger:
 action:
   - service: climate.set_hvac_mode
     data:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_056_mode
+      entity_id: climate.bathroom_thermostat
       hvac_mode: 'heat'
   # delay a bit, same timing does not work
   - delay: '00:00:03'
   - service: climate.set_temperature
     data:
-      entity_id: climate.thermofloor_as_heatit_thermostat_tf_056_mode
+      entity_id: climate.bathroom_thermostat
       temperature: 19

@@ -6,10 +6,10 @@ trigger:
 action:
   - service: climate.set_temperature
     data:
-      entity_id: climate.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_mode
+      entity_id: climate.kitchen_thermostat
       temperature: 12
   - delay: '00:00:03'
   - service: climate.set_hvac_mode
     data:
-      entity_id: climate.qubino_goap_zmnhidx_flush_on_off_thermostat_h1s2p1_mode
+      entity_id: climate.kitchen_thermostat
       hvac_mode: 'off'

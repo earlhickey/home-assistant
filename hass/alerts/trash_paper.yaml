@@ -2,9 +2,9 @@ alias: Notify trash paper
 trigger:
   platform: state
   entity_id: sensor.trash_vandaag
-  to: 'papier'
-  for: "07:00:00"
+  to: papier
 action:
-  service: notify.mobile_app_oneplus_a5010
+  service: notify.notify
   data:
-    message: "Vandaag wordt papier opgehaald"
+    title: Afval
+    message: Vandaag wordt papier opgehaald

@@ -1,0 +1,9 @@
+alias: Notify pillen
+trigger:
+  - platform: time
+    at: "09:00:00"
+action:
+  service: notify.mobile_app_oneplus_a5010
+  data:
+    title: Medicijn
+    message: Pillen innemen

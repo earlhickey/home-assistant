@@ -2,9 +2,9 @@ alias: Notify trash pmd
 trigger:
   platform: state
   entity_id: sensor.trash_vandaag
-  to: 'pmd'
-  for: "07:00:00"
+  to: pmd
 action:
-  service: notify.mobile_app_oneplus_a5010
+  service: notify.notify
   data:
-    message: "Vandaag wordt plastic opgehaald"
+    title: Afval
+    message: Vandaag wordt plastic opgehaald
